@@ -9,7 +9,7 @@ Content-Type: application/json
 {
   "nome": "event 1",
   "descricao": "event 1 description",
-  "data": "2024-06-02T10:23:14",
+  "data": "2024-06-02T10:23:14Z",
   "preco": 100.10
 }
 
