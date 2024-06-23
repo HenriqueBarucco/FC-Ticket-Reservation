@@ -31,3 +31,35 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/events/{{eventId}}
+
+###
+GET http://localhost:3000/events/{{eventId}}/spots
+
+###
+# @name createSpot
+POST http://localhost:3000/events/{{eventId}}/spots
+Content-Type: application/json
+
+{
+  "name": "New Spot"
+}
+
+###
+@spotId = {{createSpot.response.body.id}}
+
+###
+GET http://localhost:3000/events/{{eventId}}/spots/{{spotId}}
+
+###
+PATCH http://localhost:3000/events/{{eventId}}/spots/{{spotId}}
+Content-Type: application/json
+
+{
+  "name": "New Event",
+  "description": "Event description",
+  "date": "2024-01-01T00:00:00Z",
+  "price": 1000
+}
+
+###
+DELETE http://localhost:3000/events/{{eventId}}/spots/{{spotId}}
